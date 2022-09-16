@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var teststring:String
+    @Inject
+    lateinit var firebase: Firebase
     
     val TAG="PR7"
     override fun onCreate(savedInstanceState: Bundle?) {

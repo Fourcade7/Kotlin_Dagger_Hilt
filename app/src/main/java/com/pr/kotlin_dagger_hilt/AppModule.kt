@@ -14,4 +14,11 @@ class AppModule {
     @Singleton
     @Provides
     fun provideTestString()="This is a string will inject777"
+
+    @Provides
+    fun provideFirebase():Firebase{
+        val firebase=Firebase()
+        firebase.connect()
+        return firebase
+    }
 }
