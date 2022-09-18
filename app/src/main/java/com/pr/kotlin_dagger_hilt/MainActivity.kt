@@ -3,17 +3,24 @@ package com.pr.kotlin_dagger_hilt
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     @Inject
+    @Named("fullname")
     lateinit var teststring:String
     @Inject
     lateinit var firebase: Firebase
+
+
+
+     val viewModel: TestViewModel by viewModels()
     
     val TAG="PR7"
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,5 +28,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         Log.d(TAG, "onCreate: $teststring")
+
+        viewModel.prviewmodel()
+
+
     }
 }

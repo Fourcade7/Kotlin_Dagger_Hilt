@@ -4,6 +4,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import javax.inject.Named
 import javax.inject.Singleton
 
 
@@ -13,7 +14,13 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun provideTestString()="This is a string will inject777"
+    @Named("name")
+    fun provideName()="Fourcade"
+
+    @Singleton
+    @Provides
+    @Named("fullname")
+    fun provideFullname()="Aminov Fourcade"
 
     @Provides
     fun provideFirebase():Firebase{
