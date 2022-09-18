@@ -20,16 +20,15 @@ class MainActivity : AppCompatActivity() {
 
 
 
-     val viewModel: TestViewModel by viewModels()
+    val testViewModel: TestViewModel by viewModels()
     
     val TAG="PR7"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Log.d(TAG, "onCreate: $teststring")
+        testViewModel
 
-        viewModel.prviewmodel()
 
 
     }
