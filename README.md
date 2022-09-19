@@ -18,3 +18,7 @@
         //viewmodel
         implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
         annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0'
+        
+        
+        //actiivty ktx
+        implementation "androidx.activity:activity-ktx:1.5.1"
